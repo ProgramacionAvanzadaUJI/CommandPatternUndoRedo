@@ -2,6 +2,7 @@ package main;
 
 import telemando.CargadorTelemando;
 import telemando.Telemando;
+import telemando.TelemandoUndoRedo;
 import telemando.TipoAccion;
 
 /**
@@ -14,11 +15,13 @@ public class Main {
 
     private void lauch() {
         CargadorTelemando cargadorTelemando = new CargadorTelemando();
-        Telemando telemando = new Telemando();
+        TelemandoUndoRedo telemando = new TelemandoUndoRedo();
         cargadorTelemando.cargaTelemando(telemando);
         telemando.ejecutaAccion(TipoAccion.ENCENDER_TV);
         telemando.ejecutaAccion(TipoAccion.ENCENDER_DVD);
-        telemando.ejecutaAccion(TipoAccion.APAGAR_TV);
-        telemando.ejecutaAccion(TipoAccion.APAGAR_DVD);
+        telemando.undoAccion();
+        telemando.undoAccion();
+        telemando.redoAccion();
+        telemando.redoAccion();
     }
 }

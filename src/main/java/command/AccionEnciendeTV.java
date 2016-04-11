@@ -17,4 +17,9 @@ public class AccionEnciendeTV implements Accion {
     public void ejecutaAccion() {
         tv.enciende();
     }
+
+    @Override
+    public void undo() {
+        tv.apaga();
+    }
 }

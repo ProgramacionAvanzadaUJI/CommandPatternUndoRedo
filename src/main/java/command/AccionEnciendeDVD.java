@@ -17,4 +17,9 @@ public class AccionEnciendeDVD implements Accion {
     public void ejecutaAccion() {
         dvd.play();
     }
+
+    @Override
+    public void undo() {
+        dvd.stop();
+    }
 }

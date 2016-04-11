@@ -9,7 +9,7 @@ import java.util.Map;
  * Created by oscar on 11/4/16.
  */
 public class Telemando {
-    private Map<TipoAccion, Accion> acciones = new HashMap<TipoAccion, Accion>();
+    protected Map<TipoAccion, Accion> acciones = new HashMap<TipoAccion, Accion>();
 
     public void ejecutaAccion(TipoAccion tipoAccion) {
         acciones.get(tipoAccion).ejecutaAccion();

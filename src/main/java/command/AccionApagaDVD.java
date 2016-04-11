@@ -17,4 +17,9 @@ public class AccionApagaDVD implements Accion {
     public void ejecutaAccion() {
         dvd.stop();
     }
+
+    @Override
+    public void undo() {
+        dvd.play();
+    }
 }

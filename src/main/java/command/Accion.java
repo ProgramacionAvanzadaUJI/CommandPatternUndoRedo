@@ -5,4 +5,5 @@ package command;
  */
 public interface Accion {
     void ejecutaAccion();
+    void undo();
 }
